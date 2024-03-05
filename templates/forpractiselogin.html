@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #login {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="login">
+        <h2>Login</h2>
+        <p>Please enter your username and password.</p>
+        <input type="text" id="username" placeholder="Username" required><br><br>
+        <input type="password" id="password" placeholder="Password" required><br><br>
+        <button onclick="login()">Login</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Example: Authenticate using JavaScript (replace with your actual authentication logic)
+            if (username === "admin" && password === "password") {
+                // Successful login
+                document.getElementById("message").innerHTML = "Login successful!";
+                // Redirect to dashboard or another page
+                // window.location.href = "/dashboard";
+            } else {
+                // Failed login
+                document.getElementById("message").innerHTML = "Incorrect username or password. Please try again.";
+            }
+        }
+    </script>
+</body>
+</html>
